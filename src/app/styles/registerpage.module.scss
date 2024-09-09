@@ -1,0 +1,170 @@
+.registerContainer {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    padding: 200px 20px;
+    color: white;
+
+    .formContainer {
+        width: 800px;
+        height: fit-content;
+        padding: 15px 20px 100px 20px;
+        border: 1px solid white;
+        border-radius: 20px;
+        position: relative;
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        .form {
+            margin-top: 20px;
+
+            .input {
+                width: 100%;
+                height: 50px;
+                padding: 5px 10px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 10px;
+                background-color: black;
+                font-size: 14px;
+
+                &::placeholder{
+                    color: rgba(255, 255, 255, 0.452);
+                    font-size: 12px;
+                }
+
+                &:focus {
+                    font-size: 12px;
+                    border-color: rgb(0, 255, 213);
+                }
+            }
+
+            .email,.password,.name,.country {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                transition: all ease-in-out 0.3s;
+
+                .errorInput {
+                    border: 2px solid red;
+                    color: red;
+                }
+
+                .successInput {
+                    border: 1px solid rgb(102, 255, 0);
+                    font-size: 11.5px;
+                    color: rgb(102, 255, 0);
+                }
+
+                .error{
+                    color: red;
+                    font-size: 10px;
+                    position: relative;
+                    left: 5px;
+                }
+
+                .success {
+                    color: rgb(102, 255, 0);
+                    top: 11px;
+                    font-size: 10px;
+                    left: 5px;
+                    background-color: black;
+                    border: 1px solid rgb(102, 255, 0);
+                    padding: 2px 8px;
+                    border-radius: 6px;
+                }
+
+                &:focus-within {
+                    label{
+                        top: 15px;
+                        background-color: black;
+                        border-radius: 6px;
+                        padding: 2px 8px;
+                        border: 1px solid rgb(0, 255, 213);
+                        font-size: 10px;
+                        left: 15px;
+                        color: rgb(0, 255, 213);
+                    }
+                    .input {
+                        border: 2px solid rgb(0, 255, 213);
+                    }
+                }
+
+                label {
+                    position: relative;
+                    left: 5px;
+                    transition: all 0.3s ease;
+                    width: fit-content;
+                    font-size: 14.5px;
+                }
+            }
+
+            .country {
+                select {
+                    background-color: black;
+                    color: white;
+                    border: 2px solid white;
+                    font-size: 12px;
+                    padding: 10px 10px;
+                    border-radius: 10px;
+                    height: 50px;
+
+                    &:focus {
+                        border-color:rgb(0, 255, 213) ;
+                    }
+
+                    .countryOptions {
+                        padding: 5px;
+                    }
+                }
+            }
+            
+            .buttonContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+
+                .registerButton {
+                    font-size: 14px;
+                    padding: 3px 15px;
+                    background-color: black;
+                    border: 1px solid white;
+                    border-radius: 6px;
+                    cursor:pointer;
+    
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .containerBottom {
+            position: absolute;
+            bottom: 10px;
+            .bottomLinks {
+                width: fit-content;
+                border-bottom: 1px solid white;
+                font-size: 12px;
+                &:hover {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .registerContainer .formContainer {
+        padding: 10px 8px 80px 8px;
+        border: none;
+    }
+}

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.slick-dots li button:before {
+    color: #ffffff; 
+  }
+  
+.slick-dots li.slick-active button:before {
+    color: white;
+  }

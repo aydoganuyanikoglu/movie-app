@@ -1,0 +1,101 @@
+.sliderContainer {
+    width: 100%;
+    height: 500px;
+
+        .slides {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            position: relative;
+
+            .slidesLeft {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 7px;
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 700;
+                    width: fit-content;
+                    background: #6A6A6A;
+                    background: linear-gradient(to right, #6A6A6A 0%, #E2E2E2 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    
+                }
+                p{
+                    font-size: 14px;
+                    width: 45%;
+                }
+            }
+            .movieImagee {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .playButton {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 50%;
+                left: calc(50% - 50px);
+                cursor: pointer;
+                z-index: 1;
+                
+                &:hover {
+                    filter: brightness(50%);
+                }
+            }
+        }
+    }
+
+
+
+@media screen and (max-width: 880px) {
+    .sliderContainer {
+        height: 400px !important;
+        
+            .slides {
+                height: 400px;
+        
+                .playButton {
+                        display: none;
+                }
+        
+                .slidesLeft {
+                    padding-left: 20px;
+                    background: none;
+                    padding-right: 20px;
+                    h1 {
+                        font-size: 19px;
+                        }
+                    p{
+                        font-size: 11px;
+                        width: 100%;
+                    }
+                    }
+                .movieImagee {
+                    width: 100%;
+                    filter: brightness(10%);
+         }
+ } }}
+
+
+@media screen and (max-width: 550px) {
+    .sliderContainer{ 
+        h1{
+            font-size: 17px !important;
+    }   
+        p {
+            font-size: 10.5px !important;
+        }
+} 
+}
